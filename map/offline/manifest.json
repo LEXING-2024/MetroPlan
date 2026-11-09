@@ -1,0 +1,140 @@
+{
+  "bounds": [
+    112.32,
+    23.0,
+    112.82,
+    23.26
+  ],
+  "zooms": [
+    9,
+    14
+  ],
+  "tileCount": 451,
+  "tileBytes": 7576038,
+  "tileTemplate": "https://tiles.openfreemap.org/planet/20261101_080013_pt/{z}/{x}/{y}.pbf",
+  "openFreeMapVersion": "3.16.0",
+  "fonts": [
+    {
+      "font": "Noto Sans Regular",
+      "range": "0-255",
+      "bytes": 76580
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "256-511",
+      "bytes": 127219
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "512-767",
+      "bytes": 95728
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "768-1023",
+      "bytes": 74752
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "8192-8447",
+      "bytes": 34070
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "8448-8703",
+      "bytes": 42129
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "12288-12543",
+      "bytes": 147462
+    },
+    {
+      "font": "Noto Sans Regular",
+      "range": "65024-65279",
+      "bytes": 77890
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "0-255",
+      "bytes": 81170
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "256-511",
+      "bytes": 134545
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "512-767",
+      "bytes": 101458
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "768-1023",
+      "bytes": 78937
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "8192-8447",
+      "bytes": 35678
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "8448-8703",
+      "bytes": 44216
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "12288-12543",
+      "bytes": 156393
+    },
+    {
+      "font": "Noto Sans Bold",
+      "range": "65024-65279",
+      "bytes": 83492
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "0-255",
+      "bytes": 79907
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "256-511",
+      "bytes": 132406
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "512-767",
+      "bytes": 97447
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "768-1023",
+      "bytes": 75983
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "8192-8447",
+      "bytes": 34787
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "8448-8703",
+      "bytes": 42052
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "12288-12543",
+      "bytes": 147461
+    },
+    {
+      "font": "Noto Sans Italic",
+      "range": "65024-65279",
+      "bytes": 77878
+    }
+  ],
+  "fontBytes": 2079640,
+  "source": "© OpenStreetMap contributors (ODbL) · tiles OpenFreeMap / OpenMapTiles"
+}

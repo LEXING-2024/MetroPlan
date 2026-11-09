@@ -1,0 +1,31 @@
+{
+  "name": "metro-plan",
+  "private": true,
+  "version": "0.9.2",
+  "type": "module",
+  "description": "《地铁规划》Metro Plan — 端州·鼎湖 地铁规划模拟",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "test": "vitest run",
+    "e2e": "node tools/smoke.mjs",
+    "e2e:ui": "node tools/smoke2.mjs",
+    "perf": "node tools/perf.mjs",
+    "shots": "node tools/shots.mjs",
+    "check:build": "node tools/check-build.mjs",
+    "e2e:editor": "node tools/editor-smoke.mjs",
+    "shots:editor": "node tools/editor-demo.mjs"
+  },
+  "dependencies": {
+    "pixi.js": "^8.22.0"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.16.0",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.1.0"
+  }
+}
+
+

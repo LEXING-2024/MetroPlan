@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f0e6" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f4f0e6'/%3E%3Cpath d='M14 44 26 20l10 16 14-24' fill='none' stroke='%23b4623f' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='14' cy='44' r='5' fill='%23f4f0e6' stroke='%2334382f' stroke-width='4'/%3E%3Ccircle cx='50' cy='12' r='5' fill='%23f4f0e6' stroke='%2334382f' stroke-width='4'/%3E%3C/svg%3E"
+    />
+    <meta
+      name="description"
+      content="《地铁规划》端州·鼎湖可交互 OSM 矢量底图：MapLibre GL + OpenFreeMap，包含道路、建筑、土地利用、水系与 POI。"
+    />
+    <title>端州 · 鼎湖 — Metro Plan 矢量底图</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="map"></div>
+      <div class="vignette" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="plate" aria-hidden="true"></div>
+
+      <header class="brand ui">
+        <div class="eyebrow">
+          <span class="eyebrow-mark"></span>
+          Metro Plan · Basemap 01
+        </div>
+        <h1>端州<span class="dot">·</span>鼎湖</h1>
+        <p class="brand-sub">OSM 矢量底图<i>/</i>MapLibre GL</p>
+        <div class="brand-meta">
+          <span>112.32–112.82°E</span>
+          <span>23.00–23.26°N</span>
+          <span>16:9</span>
+        </div>
+      </header>
+
+      <div class="top-actions ui">
+        <button
+          class="pill-button"
+          id="fit-button"
+          type="button"
+          title="回到游戏地图范围（F）"
+        >
+          <span class="glyph">⌖</span>全图
+        </button>
+        <button
+          class="pill-button"
+          id="layers-button"
+          type="button"
+          aria-expanded="false"
+          aria-controls="layer-panel"
+          title="打开图层"
+        >
+          <span class="glyph">◫</span>图层
+        </button>
+      </div>
+
+      <div class="hint ui" id="hint">
+        拖动浏览 · 滚轮缩放 · 放大至 Z14 查看建筑与设施
+      </div>
+
+      <div class="readout ui">
+        <b>中心</b>
+        <span id="coord">112.5750° E / 23.1300° N</span>
+        <span class="rule"></span>
+        <span id="zoom-value">Z 12.2</span>
+      </div>
+
+      <nav class="view-nav ui" aria-label="快速前往">
+        <span class="view-label">前往</span>
+        <button class="view-chip" type="button" data-view="all">全域</button>
+        <button class="view-chip" type="button" data-view="duanzhou">端州</button>
+        <button class="view-chip" type="button" data-view="dinghu">鼎湖</button>
+        <button class="view-chip" type="button" data-view="xinghu">星湖</button>
+      </nav>
+
+      <div class="zoombar ui" aria-label="缩放地图">
+        <button class="zoom-button" id="zoom-in" type="button" title="放大">+</button>
+        <button class="zoom-button" id="zoom-out" type="button" title="缩小">−</button>
+      </div>
+
+      <aside class="layer-panel ui" id="layer-panel" aria-label="图层">
+        <div class="panel-head">
+          <div>
+            <div class="panel-kicker">Layers</div>
+            <h2>图层</h2>
+          </div>
+          <button class="panel-close" id="panel-close" type="button" title="收起">×</button>
+        </div>
+        <p class="panel-intro">
+          全部几何来自 OpenStreetMap；放大后道路、建筑和设施会逐级出现。
+        </p>
+        <div id="layer-rows"></div>
+
+        <div class="panel-legend" aria-label="图例">
+          <div class="legend-item"><i style="--swatch:#b8d3d7"></i>水系 / 西江</div>
+          <div class="legend-item"><i style="--swatch:#cfdbc0"></i>林地 / 山体</div>
+          <div class="legend-item"><i style="--swatch:#f0e8d9"></i>居住 / 商业</div>
+          <div class="legend-item"><i style="--swatch:#f1e7d0"></i>学校 / 医疗</div>
+          <div class="legend-item"><i style="--swatch:#e7decd"></i>建筑轮廓</div>
+          <div class="legend-item"><i style="--swatch:#e5bd99"></i>主要道路</div>
+          <div class="legend-item"><i style="--swatch:#948b77"></i>铁路</div>
+          <div class="legend-item"><i style="--swatch:#7497a3"></i>轮渡</div>
+        </div>
+
+        <div class="panel-actions">
+          <button class="panel-action" id="show-all" type="button">全部显示</button>
+          <button class="panel-action" id="only-base" type="button">只看底图</button>
+        </div>
+        <div class="panel-foot">
+          建筑与 POI 来自 z14 OSM 瓦片，继续放大时为过缩放显示。
+        </div>
+      </aside>
+
+      <div class="credit" id="credit">
+        © OpenStreetMap contributors
+        <span class="sep">·</span>
+        矢量瓦片 <a href="https://openfreemap.org" target="_blank" rel="noreferrer">OpenFreeMap</a>
+        / <a href="https://openmaptiles.org" target="_blank" rel="noreferrer">OpenMapTiles</a>
+        <span class="sep">·</span>
+        地形 <a href="https://registry.opendata.aws/terrain-tiles/" target="_blank" rel="noreferrer">AWS Terrain Tiles</a>
+        <span class="sep">·</span>
+        Metro Plan 底图研究 / 2026
+      </div>
+
+      <div class="boot" id="boot">
+        <div class="boot-mark" aria-hidden="true"></div>
+        <div class="boot-title">端州 · 鼎湖</div>
+        <div class="boot-sub">OSM / MapLibre · 正在铺设底图</div>
+        <div class="boot-bar"><i></i></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,209 @@
+{
+  "type": "FeatureCollection",
+  "name": "metro-plan-curated-labels",
+  "attribution": "Positions derived from OpenStreetMap data © OpenStreetMap contributors (ODbL)",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "端州区",
+        "kind": "district",
+        "rank": 1,
+        "short": "端州"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.480119,
+          23.0545734
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "鼎湖区",
+        "kind": "district",
+        "rank": 1,
+        "short": "鼎湖"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.5625362,
+          23.1618953
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "高要区",
+        "kind": "district",
+        "rank": 3,
+        "short": "高要"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.452589,
+          23.0279783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "四会市",
+        "kind": "district",
+        "rank": 3,
+        "short": "四会"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.72848,
+          23.32913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "西江",
+        "kind": "river",
+        "rank": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6803,
+          23.1762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "砚洲岛",
+        "kind": "island",
+        "rank": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6266152,
+          23.1787221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "黄布沙岛",
+        "kind": "island",
+        "rank": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6538,
+          23.1625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "琴沙岛",
+        "kind": "island",
+        "rank": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.7881747,
+          23.1595889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "北岭山",
+        "kind": "mountain",
+        "rank": 1,
+        "ele": 690
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.4582418,
+          23.1128545
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "鼎湖山",
+        "kind": "mountain",
+        "rank": 1,
+        "ele": 1000
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.5373,
+          23.1716
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "烂柯山",
+        "kind": "mountain",
+        "rank": 2,
+        "ele": 880
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.6203506,
+          23.1061836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "羚羊峡",
+        "kind": "mountain",
+        "rank": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.5528,
+          23.1118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "星湖",
+        "kind": "lake",
+        "rank": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          112.4655,
+          23.0748
+        ]
+      }
+    }
+  ]
+}
